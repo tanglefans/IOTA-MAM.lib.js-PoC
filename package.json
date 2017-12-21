@@ -1,0 +1,33 @@
+{
+  "name": "mam.client.js",
+  "private": false,
+  "version": "0.0.1",
+  "main": "lib/library.js",
+  "scripts": {
+    "web": "webpack --progress --colors --watch",
+    "node": "webpack --progress --colors --watch --env node",
+    "build": "webpack --progress --colors --env node && webpack --progress --colors",
+    "test": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
+    "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "iota.crypto.js": "iotaledger/iota.crypto.js",
+    "iota.lib.js": "^0.4.3",
+    "pify": "^3.0.0",
+    "rust-wasm-loader": "^0.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.1",
+    "babel-loader": "7.1.2",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-preset-env": "1.6.1",
+    "chai": "4.1.2",
+    "mocha": "4.0.1",
+    "rust-emscripten-loader": "^0.0.1",
+    "webpack": "3.7.1",
+    "yargs": "7.1.0"
+  }
+}

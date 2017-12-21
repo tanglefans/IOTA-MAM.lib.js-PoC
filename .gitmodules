@@ -1,0 +1,3 @@
+[submodule "iota-bindings"]
+	path = iota-bindings
+	url = https://github.com/iotaledger/iota-bindings.git

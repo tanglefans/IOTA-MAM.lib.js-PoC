@@ -6,6 +6,33 @@ This is wrapper library for the WASM/ASM.js output of the [IOTA Bindings reposit
 
 > This is a work in progress. The library is usable, however it is still evolving and may have some breaking changes in the future. These will most likely be minor, in addition to extending functionality.
 
+
+## Basic Setup
+
+### Prerequisites:
+
+- Node.js installed
+
+- Basic JS knowledge
+
+
+### Running the Client 
+
+- Clone Repository
+
+- Open command line and cd to the MAM Client directory
+
+- run command "npm install"
+
+- run command "node example/publishPublicStart.js" to broadcast a message
+
+- run command "node example/fetchAsync.js" to receive messages
+
+- Congratulations, you used IOTA for MAM Message transmition
+
+- You can change the message submitted in the file "example/publishPublicStart.js" and start further experiments with MAM, feel free to commit any awesome changes you've made
+
+
 ## Getting Started
 
 After downloading the appropriate file for your project, `mam.node.js` or `mam.web.js`, importing the library will provide access to the functions described below. 
@@ -13,6 +40,8 @@ After downloading the appropriate file for your project, `mam.node.js` or `mam.w
 For a simple user experience you are advised to call the `init()` function to enable to tracking of state in your channels.When calling `init()` you should also pass in your initialised IOTA library.  This will provide access to some extra functionality including attaching, fetching and subscribing.
 
 > *Please see example/index.js for a working example*
+
+
 
 ## Basic Usage
 

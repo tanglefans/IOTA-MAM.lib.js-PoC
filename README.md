@@ -1,4 +1,4 @@
-# MAM Client JS Library - IOTA.WTF EDITION
+# MAM Client JS Library - TANGLE.FANS EDITION
 
 It is possible to publish transactions to the Tangle that contain only messages, with no value. This introduces many possibilities for data integrity and communication, but comes with the caveat that message-only signatures are not checked. What we introduce is a method of symmetric-key encrypted, signed data that takes advantage of merkle-tree winternitz signatures for extended public key usability, that can be found trivially by those who know to look for it.
 

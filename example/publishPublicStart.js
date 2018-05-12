@@ -1,9 +1,10 @@
 // Thanks to Lewis -the potatoe- Freiberg for the code, we made some edits :) //
 let Mam = require('../lib/mam.node.js');
 let IOTA = require('iota.lib.js');
+let _ = require('lodash');
 
 // LIVE NODE !
-let iota = new IOTA({ provider: `http://iota.nck.nz:14265` });
+let iota = new IOTA({ provider: `https://testnet140.tangle.works` });
 
 let yourMessage = 'visit iota.wtf - IOTA MAM client proof of concept'
 
@@ -44,9 +45,13 @@ mamState = Mam.init(iota, seed, 2, 0);
 // Fetch all the messages in the stream.
 fetchStartCount().then(v => {
     // Log the messages.
-    let startCount = v.messages.length;
+    if (_.has(v,'messages')) {
+        var startCount = v.messages.length;
+    } else {
+        var startCount = 0;
+    }
     console.log('Messages already in the stream:');
-    for (let i = 0; i < v.messages.length; i++){
+    for (let i = 0; i < startCount; i++){
         let msg = v.messages[i];
         console.log(JSON.parse(iota.utils.fromTrytes(msg)));
     }
